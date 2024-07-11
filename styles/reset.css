@@ -1,0 +1,32 @@
+/* HTML 초기화용 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+* {box-sizing:border-box;}
+body,html,
+h1,h2,h3,h4,h5,h6,fieldset,
+p,ul,ol,li,dl,dt,dd,table,tr,td,th,thead,tbody,tfoot,
+div,header,nav,aside,article,section,footer,figure,
+address,blockquote,video,iframe,hr,
+span,em,strong,q,a,sub,sup,details,figcaption,summary,
+time,s,del,code,mark,img {
+    font-family: 'Noto Sans KR', sans-serif; /* 가장 근접한 글꼴 */
+    font-size:1.0em;
+    font-weight:normal;
+    font-style:normal;
+    line-height:1.5; margin:0; padding:0;
+    color:#000;
+}
+a {color:#000; text-decoration:none;}
+ul,ol,li {list-style:none;}
+table,tr,td,th {border-collapse:collapse;}
+th {text-align:left;}
+fieldset {border:0;}
+.skip {display:none;}
+input, button, label {cursor: pointer;}
+/* 스크롤바 꾸미기 */
+body::-webkit-scrollbar {
+    background-color: #333;
+    width: 4px; height: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #FF3D00;
+}

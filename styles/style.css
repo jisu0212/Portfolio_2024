@@ -1,0 +1,102 @@
+@font-face {
+    font-family: book;
+    font-weight: 400;
+    src: url(../font/05-1066-bdh9461.ttf);
+}
+body,html {scroll-behavior: smooth;}
+/* 공통 */
+h1 {
+    color:#ff3d00; font-size: 3.125rem;
+    font-family: 'book';
+}
+.profile, .project > div {
+    max-width: 1400px; margin:0 auto;
+}
+/* nav */
+nav {
+    position:fixed; right:50px; bottom:400px; z-index: 999;
+    display:flex; flex-flow:column;
+}
+nav a {margin-top: 20px;}
+nav a:hover {color:#ff3d00;}
+/* 1.인트로 */
+.bg {
+    background-image: url(../imgaes/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px 0 0;
+    height:100vh;
+}
+.bg .intro {text-align: center;}
+.bg .intro h1 {
+    font-size: 15.625rem;
+}
+.bg .intro > p {
+    position: absolute; top:283px; right:625px;
+    animation: spin 0.8s ease infinite alternate-reverse;
+}
+@keyframes spin {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(15px);}
+}
+.bg .intro p img {}
+.bg .intro .center {
+    display: flex; align-items: center; justify-content: center; transform: translateY(-40px);
+}
+.bg .intro .center .info {font-size: 1.25rem; color:#ff3d00;}
+.bg .intro .center .info::after {
+    content: ''; width: 380px; height: 1px;
+    background-color: #ff3d00; display:inline-block;
+    position:relative; bottom:5px; margin: 0 60px;
+}
+.bg .intro .center .year {font-size: 3.75rem; color:#ff3d00;}
+/* 2. 프로필 */
+.profile {padding:80px 0 0;}
+.profile h1 {margin-bottom:50px;}
+.profile .txt {display:flex; justify-content: space-between;}
+.profile .txt > p {}
+.profile .txt > p img {transform: translateY(5px);}
+.profile .txt ul {position:relative;}
+.profile .txt ul:last-child {margin-left: 15px;}
+.profile .txt ul:last-child::after {display: none;}
+.profile .txt ul::after {
+    content: ''; width:1px; height: 600px;
+    position: absolute; right:-50px; top:0;
+    background-color: #eee;
+}
+.profile .txt ul li {display: flex; margin-top: 40px; align-items: flex-start;}
+.profile .txt ul li p {margin-right: 10px; font-size: 1.125rem;}
+.profile .txt ul li p img {position:relative; top:3px;}
+.profile .txt ul li .info_detail {margin-bottom: 15px;}
+.profile .txt ul li .info_detail:nth-child(5),
+.profile .txt ul li:first-child,
+.profile .txt ul li:nth-child(4) .big_detail .info_detail:nth-child(2) {margin:0;}
+.profile .txt ul li .info_detail .date {color:#656565;}
+.profile .txt ul li .info_detail {}
+.profile .txt ul li .big_detail {}
+.profile .txt ul li .big_detail .info_detail {}
+.profile .txt ul li .big_detail .info_detail .date {}
+.profile .txt ul li .big_detail .info_detail p {}
+.profile .txt ul li .big_detail .info_detail p em {
+    color:#656565;
+}
+/* 3. 스킬 */
+.skills {
+    background-color: #f8f8f8; padding:70px 260px;
+}
+.skills h1 {margin-bottom: 50px;}
+.skills .skills_info {display:flex; flex-flow:row wrap;}
+.skills .skills_info li {display:flex; width:50%; margin-bottom: 70px;}
+.skills .skills_info li:nth-child(7),
+.skills .skills_info li:nth-child(8) {
+    margin:0;
+}
+.skills .skills_info li p {margin-right: 33px;}
+.skills .skills_info li p img {}
+.skills .skills_info li .skills_txt {}
+.skills .skills_info li .skills_txt h2 {
+    font-size: 1.25rem; font-weight: 600;
+}
+.skills .skills_info li .skills_txt p {
+    font-size: 1.125rem; margin-top: 8px;
+}
