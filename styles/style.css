@@ -100,3 +100,39 @@ nav a:hover {color:#ff3d00;}
 .skills .skills_info li .skills_txt p {
     font-size: 1.125rem; margin-top: 8px;
 }
+/* 4. 프로젝트 */
+.project {width:1522px; margin:0 auto; text-align: center; padding:80px 0; background-color: lime;}
+.project h1 {}
+.project .pjt_name {
+    font-size: 6.25rem; color:#efefef;
+    font-weight: 200; text-align: left;
+}
+.project .web {background-color: beige; position:relative;}
+.project .web .swiper {}
+.project .web .swiper .swiper-wrapper {}
+.project .web .swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+}
+.project .web .swiper .swiper-wrapper .swiper-slide .thum {
+    margin-right: 69px;
+}
+.project .web .swiper .swiper-wrapper .swiper-slide .thum img {}
+.project .web .swiper .swiper-wrapper .swiper-slide .info {
+    text-align: left; font-size: 1.125rem;
+}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_title {margin-bottom: 70px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_title p {color:#ff3d00;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_title p img {}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail {}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li {display: flex; margin-bottom: 20px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li:last-child {margin-bottom: 70px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li h2 {margin-right: 20px; font-weight: 700;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li p {}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .overview {}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .overview h2 {font-weight: 700; margin-bottom: 10px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .overview p {}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .link {display: flex; justify-content: space-between; margin-top: 70px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .link a {border:1px solid #e2e2e2; padding:10px 45px; border-radius: 10px;}
+.project .web .swiper-button-prev {}
+.project .web .swiper-button-next {}
+.project .web div[class^=swiper-button] {color:#f5f5f5;}
