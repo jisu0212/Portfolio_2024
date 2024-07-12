@@ -57,6 +57,9 @@ nav a:hover {color:#ff3d00;}
 .profile .txt > p {}
 .profile .txt > p img {transform: translateY(5px);}
 .profile .txt ul {position:relative;}
+.profile .txt ul:first-child li:last-child .info_detail p:first-child {
+    margin-bottom: 5px;
+}
 .profile .txt ul:last-child {margin-left: 15px;}
 .profile .txt ul:last-child::after {display: none;}
 .profile .txt ul::after {
@@ -101,20 +104,18 @@ nav a:hover {color:#ff3d00;}
     font-size: 1.125rem; margin-top: 8px;
 }
 /* 4. 프로젝트 */
-.project {width:1522px; margin:0 auto; text-align: center; padding:80px 0; background-color: lime;}
-.project h1 {}
-.project .pjt_name {
-    font-size: 6.25rem; color:#efefef;
-    font-weight: 200; text-align: left;
-}
-.project .web {background-color: beige; position:relative;}
-.project .web .swiper {}
+.project {width:1522px; margin:0 auto; text-align: center; padding:80px 0;}
+.project h1 {margin-bottom: 30px;}
+/* 4-1. 웹 */
+.project .web {position:relative;
+margin-bottom: 100px;}
+.project .web .swiper {max-width:1300px;}
 .project .web .swiper .swiper-wrapper {}
 .project .web .swiper .swiper-wrapper .swiper-slide {
     display: flex;
 }
 .project .web .swiper .swiper-wrapper .swiper-slide .thum {
-    margin-right: 69px;
+    margin-right: 50px;
 }
 .project .web .swiper .swiper-wrapper .swiper-slide .thum img {}
 .project .web .swiper .swiper-wrapper .swiper-slide .info {
@@ -135,4 +136,34 @@ nav a:hover {color:#ff3d00;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .link a {border:1px solid #e2e2e2; padding:10px 45px; border-radius: 10px;}
 .project .web .swiper-button-prev {}
 .project .web .swiper-button-next {}
-.project .web div[class^=swiper-button] {color:#f5f5f5;}
+.project .web div[class^=swiper-button] {color:#dddddd;}
+/* 4-2. 랜딩페이지(코딩) */
+.project .landing {background-color: beige; position:relative;}
+.project .landing .swiper {max-width:1300px;}
+.project .landing .swiper .swiper-wrapper {}
+.project .landing .swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+}
+.project .landing .swiper .swiper-wrapper .swiper-slide .thum {
+    margin-left: 50px;
+}
+.project .landing .swiper .swiper-wrapper .swiper-slide .thum img {}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info {
+    text-align: left; font-size: 1.125rem;
+}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title {margin-bottom: 70px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title p {color:#ff3d00;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title p img {}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail {}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li {display: flex; margin-bottom: 20px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li:last-child {margin-bottom: 70px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li h2 {margin-right: 20px; font-weight: 700;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li p {}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .overview {}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .overview h2 {font-weight: 700; margin-bottom: 10px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .overview p {}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .link {display: flex; justify-content: space-between; margin-top: 70px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .link a {border:1px solid #e2e2e2; padding:10px 45px; border-radius: 10px;}
+.project .landing .swiper-button-prev {}
+.project .landing .swiper-button-next {}
+.project .landing div[class^=swiper-button] {color:#dddddd;}
