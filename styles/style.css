@@ -3,7 +3,7 @@
     font-weight: 400;
     src: url(../font/05-1066-bdh9461.ttf);
 }
-body,html {scroll-behavior: smooth;}
+body,html {scroll-behavior: smooth; overflow-x: hidden;}
 /* 공통 */
 h1 {
     color:#ff3d00; font-size: 3.125rem;
@@ -12,6 +12,7 @@ h1 {
 .profile, .project > div {
     max-width: 1400px; margin:0 auto;
 }
+.project .link a:hover {color:#ff3d00; transition: 0.3s;}
 /* nav */
 nav {
     position:fixed; right:50px; bottom:400px; z-index: 999;
@@ -21,7 +22,7 @@ nav a {margin-top: 20px;}
 nav a:hover {color:#ff3d00;}
 /* 1.인트로 */
 .bg {
-    background-image: url(../imgaes/bg.jpg);
+    background-image: url(../imgaes/bg.png);
     background-size: cover;
     background-attachment: fixed;
     padding: 200px 0 0;
@@ -85,7 +86,7 @@ nav a:hover {color:#ff3d00;}
 }
 /* 3. 스킬 */
 .skills {
-    background-color: #f8f8f8; padding:70px 260px;
+    background-color: #f8f8f8; padding:70px 260px 100px;
 }
 .skills h1 {margin-bottom: 50px;}
 .skills .skills_info {display:flex; flex-flow:row wrap;}
@@ -105,10 +106,10 @@ nav a:hover {color:#ff3d00;}
 }
 /* 4. 프로젝트 */
 .project {width:1522px; margin:0 auto; text-align: center; padding:80px 0;}
-.project h1 {margin-bottom: 30px;}
+.project h1 {margin-bottom: 50px;}
 /* 4-1. 웹 */
 .project .web {position:relative;
-margin-bottom: 100px;}
+margin-bottom: 150px;}
 .project .web .swiper {max-width:1300px;}
 .project .web .swiper .swiper-wrapper {}
 .project .web .swiper .swiper-wrapper .swiper-slide {
@@ -121,49 +122,110 @@ margin-bottom: 100px;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info {
     text-align: left; font-size: 1.125rem;
 }
-.project .web .swiper .swiper-wrapper .swiper-slide .info .info_title {margin-bottom: 70px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_title {margin-bottom: 50px;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .info_title p {color:#ff3d00;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .info_title p img {}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail {}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li {display: flex; margin-bottom: 20px;}
-.project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li:last-child {margin-bottom: 70px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li:last-child {margin-bottom: 50px;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li h2 {margin-right: 20px; font-weight: 700;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .info_detail li p {}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .overview {}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .overview h2 {font-weight: 700; margin-bottom: 10px;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .overview p {}
-.project .web .swiper .swiper-wrapper .swiper-slide .info .link {display: flex; justify-content: space-between; margin-top: 70px;}
+.project .web .swiper .swiper-wrapper .swiper-slide .info .link {display: flex; justify-content: space-between; margin-top: 50px;}
 .project .web .swiper .swiper-wrapper .swiper-slide .info .link a {border:1px solid #e2e2e2; padding:10px 45px; border-radius: 10px;}
 .project .web .swiper-button-prev {}
 .project .web .swiper-button-next {}
 .project .web div[class^=swiper-button] {color:#dddddd;}
 /* 4-2. 랜딩페이지(코딩) */
-.project .landing {background-color: beige; position:relative;}
+.project .landing {position:relative; margin-bottom: 150px;}
 .project .landing .swiper {max-width:1300px;}
 .project .landing .swiper .swiper-wrapper {}
 .project .landing .swiper .swiper-wrapper .swiper-slide {
     display: flex;
 }
 .project .landing .swiper .swiper-wrapper .swiper-slide .thum {
-    margin-left: 50px;
+    margin-right: 50px;
 }
 .project .landing .swiper .swiper-wrapper .swiper-slide .thum img {}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info {
     text-align: left; font-size: 1.125rem;
 }
-.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title {margin-bottom: 70px;}
-.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title p {color:#ff3d00;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title {margin-bottom: 50px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title p {color:#ff3d00; margin-bottom: 10px;}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .info_title p img {}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail {}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li {display: flex; margin-bottom: 20px;}
-.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li:last-child {margin-bottom: 70px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li:last-child {margin-bottom: 50px;}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li h2 {margin-right: 20px; font-weight: 700;}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .info_detail li p {}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .overview {}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .overview h2 {font-weight: 700; margin-bottom: 10px;}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .overview p {}
-.project .landing .swiper .swiper-wrapper .swiper-slide .info .link {display: flex; justify-content: space-between; margin-top: 70px;}
+.project .landing .swiper .swiper-wrapper .swiper-slide .info .link {display: flex; justify-content: space-between; margin-top: 50px;}
 .project .landing .swiper .swiper-wrapper .swiper-slide .info .link a {border:1px solid #e2e2e2; padding:10px 45px; border-radius: 10px;}
 .project .landing .swiper-button-prev {}
 .project .landing .swiper-button-next {}
 .project .landing div[class^=swiper-button] {color:#dddddd;}
+/* 4-3 모바일 */
+.project h1 {}
+.project .mobile {display: flex; margin-bottom: 150px;}
+.project .mobile .thum {margin-right: 50px;}
+.project .mobile .thum img {}
+.project .mobile .info {text-align: left; font-size: 1.125rem;}
+.project .mobile .info .info_title {margin-bottom: 50px;}
+.project .mobile .info .info_title p {color:#ff3d00; margin-bottom: 10px;}
+.project .mobile .info .info_title p img {}
+.project .mobile .info .info_detail {margin-bottom: 50px;}
+.project .mobile .info .info_detail li {display: flex; margin-bottom: 20px;}
+.project .mobile .info .info_detail li h2 {margin-right: 20px; font-weight: 700;}
+.project .mobile .info .info_detail li p {}
+.project .mobile .info .overview {}
+.project .mobile .info .overview h2 {font-weight: 700; margin-bottom: 10px;}
+.project .mobile .info .overview p {}
+.project .mobile .info .link {display: flex; justify-content: flex-start; margin-top: 50px;}
+.project .mobile .info .link a {border:1px solid #e2e2e2; padding:10px 45px; border-radius: 10px;}
+.project .mobile .info .link a:first-child {margin-right: 50px;}
+/* 4-4. 상세 */
+.project .detail {margin-bottom: 150px; text-align: left;}
+.project .detail p {margin-bottom: 10px; color:#ff3d00;}
+.project .detail .swiper {height:500px;} /* overflow:hidden 내장 */
+.project .detail .swiper-slide a {position:relative; display: block; height: 500px;}
+.project .detail .swiper-slide a::after {
+    content: ''; display: block; height:100px; width:100%;
+    background: linear-gradient(360deg, #fff, transparent);
+    position: absolute; left:0; bottom:0;
+}
+.project .detail .swiper-slide img {width: 100%;}
+/* 상세 팝업 */
+.big_bg {
+    position:fixed; left:0; top:0; z-index: 999;
+    width:100%; height:100vh;
+    background: rgba(0,0,0,0.6);
+}
+.big_bg .img {
+    max-width: 50vw; margin:30px auto;
+    height:90vh; overflow-y: auto; overflow-x: hidden;
+}
+.big_bg .img img {width:100%;}
+/* 스크롤바 꾸미기 */
+.big_bg .img::-webkit-scrollbar {
+    background-color: #333;
+    width: 4px; height: 10px;
+}
+.big_bg .img::-webkit-scrollbar-thumb {
+    background-color: #ff3d00;
+}
+/* 4-5 SNS */
+.project .sns {max-width: 1920px; margin-bottom: 150px;}
+.project .sns .swiper {width: 1920px;}
+.project .sns .swiper-wrapper {transition-timing-function: linear;} /* 일정속도 */
+.project .sns .swiper-slide {align-self: center;} /* flex 내장 */
+.project .sns .swiper-slide img {width:100%; box-shadow: 3px 3px 10px rgba(0,0,0,0.2);}
+/* 4-6 poster */
+.project .poster {max-width: 1920px; margin-bottom: 150px;}
+.project .poster .swiper {width: 1920px;}
+.project .poster .swiper-wrapper {transition-timing-function: linear;} /* 일정속도 */
+.project .poster .swiper-slide {align-self: center; width:400px; box-shadow: 3px 3px 10px rgba(0,0,0,0.2);}
+.project .poster .swiper-slide img {width:100%;}
