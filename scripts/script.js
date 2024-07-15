@@ -15,41 +15,48 @@ const landingS = new Swiper('.landing .swiper',{
     }
 })
 const snsS = new Swiper('.sns .swiper',{
-    slidesPerView:4, //한번에 보일 슬라이드 수(모바일)
+    slidesPerView:2, //한번에 보일 슬라이드 수(모바일)
     spaceBetween:30, //슬라이드 사이 여백
     autoplay:{delay:1,desableOnInteraction:true,},
     loop:true,
     speed:8000,
     freemode:true,
     //반응형 슬라이드 수
-    /* breakpoint:{
-        800:{slidesPerView:3,}, //800 이상일때 3개
-        1200:{slidesPerView:4,}, //1200 이상일때 4개
-    } */
-})
+    breakpoints: {
+    800: {slidesPerView: 3,},
+    1200: {slidesPerView: 4,}
+    }
+    })
 const posterS = new Swiper('.poster .swiper',{
-    slidesPerView:4, //한번에 보일 슬라이드 수(모바일)
+    slidesPerView:2, //한번에 보일 슬라이드 수(모바일)
     spaceBetween:30, //슬라이드 사이 여백
     autoplay:{delay:1,desableOnInteraction:true,},
     loop:true,
     speed:8000,
     freemode:true,
     //반응형 슬라이드 수
-    /* breakpoint:{
+    breakpoints:{
         800:{slidesPerView:3,}, //800 이상일때 3개
         1200:{slidesPerView:4,}, //1200 이상일때 4개
-    } */
+    }
 })
 //detail swiper
 const detailS = new Swiper('.detail .swiper',{
-    slidesPerView:3,//모바일 수
+    slidesPerView:2,
     spaceBetween:20,
-    autoplay:{delay:2000},
+    autoplay:{delay:3000},
     loop:true,
-    /* breakpoint:{
-        800:{slidesPerView:3,}, //800 이상일때 3개
-        1200:{slidesPerView:4,}, //1200 이상일때 4개
-    } */
+    breakpoints:{
+        800:{slidesPerView: 3,},
+    }
+})
+const packageS = new Swiper('.package_branding .swiper',{
+    autoplay:{delay:5000},
+    loop:true,
+    navigation:{
+        nextEl:'.package_branding .swiper-button-next',
+        prevEl:'.package_branding .swiper-button-prev',
+    }
 })
 //detail popup
 //1. 팝업 숨기기(big_bg)

@@ -28,21 +28,21 @@ nav a:hover {color:#ff3d00;}
     padding: 200px 0 0;
     height:100vh;
 }
-.bg .intro {text-align: center;}
+.bg .intro {text-align: center; position:relative;}
 .bg .intro h1 {
     font-size: 15.625rem;
 }
 .bg .intro > p {
-    position: absolute; top:283px; right:625px;
-    animation: spin 0.8s ease infinite alternate-reverse;
+    position: absolute; top:84px; right:625px;
+    animation: move 0.8s ease infinite alternate-reverse;
 }
-@keyframes spin {
+@keyframes move {
     0% {transform: translateY(0);}
     100% {transform: translateY(15px);}
 }
 .bg .intro p img {}
 .bg .intro .center {
-    display: flex; align-items: center; justify-content: center; transform: translateY(-40px);
+    display: flex; flex-flow: row wrap; align-items: center; justify-content: center; transform: translateY(-40px);
 }
 .bg .intro .center .info {font-size: 1.25rem; color:#ff3d00;}
 .bg .intro .center .info::after {
@@ -57,7 +57,9 @@ nav a:hover {color:#ff3d00;}
 .profile .txt {display:flex; justify-content: space-between;}
 .profile .txt > p {}
 .profile .txt > p img {transform: translateY(5px);}
+.profile .txt .txt_info {display: flex; justify-content: flex-end; width:100%;}
 .profile .txt ul {position:relative;}
+.profile .txt ul:first-child {margin-right: 100px;}
 .profile .txt ul:first-child li:last-child .info_detail p:first-child {
     margin-bottom: 5px;
 }
@@ -105,7 +107,7 @@ nav a:hover {color:#ff3d00;}
     font-size: 1.125rem; margin-top: 8px;
 }
 /* 4. 프로젝트 */
-.project {width:1522px; margin:0 auto; text-align: center; padding:80px 0;}
+.project {/* width:1522px; */ margin:0 auto; text-align: center; padding:80px 0;}
 .project h1 {margin-bottom: 50px;}
 /* 4-1. 웹 */
 .project .web {position:relative;
@@ -171,8 +173,8 @@ margin-bottom: 150px;}
 /* 4-3 모바일 */
 .project h1 {}
 .project .mobile {display: flex; margin-bottom: 150px;}
-.project .mobile .thum {margin-right: 50px;}
-.project .mobile .thum img {}
+.project .mobile .thum {margin-right: 50px; width:684px;}
+.project .mobile .thum img {width:100%;}
 .project .mobile .info {text-align: left; font-size: 1.125rem;}
 .project .mobile .info .info_title {margin-bottom: 50px;}
 .project .mobile .info .info_title p {color:#ff3d00; margin-bottom: 10px;}
@@ -180,7 +182,9 @@ margin-bottom: 150px;}
 .project .mobile .info .info_detail {margin-bottom: 50px;}
 .project .mobile .info .info_detail li {display: flex; margin-bottom: 20px;}
 .project .mobile .info .info_detail li h2 {margin-right: 20px; font-weight: 700;}
-.project .mobile .info .info_detail li p {}
+.project .mobile .info .info_detail li p span {
+    font-weight: 600; font-size: 1rem;
+}
 .project .mobile .info .overview {}
 .project .mobile .info .overview h2 {font-weight: 700; margin-bottom: 10px;}
 .project .mobile .info .overview p {}
@@ -219,13 +223,68 @@ margin-bottom: 150px;}
 }
 /* 4-5 SNS */
 .project .sns {max-width: 1920px; margin-bottom: 150px;}
-.project .sns .swiper {width: 1920px;}
+.project .sns .swiper {}
 .project .sns .swiper-wrapper {transition-timing-function: linear;} /* 일정속도 */
-.project .sns .swiper-slide {align-self: center;} /* flex 내장 */
+.project .sns .swiper-slide {align-self: center; width:470px;} /* flex 내장 */
 .project .sns .swiper-slide img {width:100%; box-shadow: 3px 3px 10px rgba(0,0,0,0.2);}
 /* 4-6 poster */
 .project .poster {max-width: 1920px; margin-bottom: 150px;}
-.project .poster .swiper {width: 1920px;}
+.project .poster .swiper {}
 .project .poster .swiper-wrapper {transition-timing-function: linear;} /* 일정속도 */
-.project .poster .swiper-slide {align-self: center; width:400px; box-shadow: 3px 3px 10px rgba(0,0,0,0.2);}
+.project .poster .swiper-slide {align-self: center; width:400px;}
 .project .poster .swiper-slide img {width:100%;}
+/* 4-7 branding & packaging */
+.project .package_branding {position:relative; margin-bottom: 100px;}
+.project .package_branding .swiper {max-width:1300px;}
+.project .package_branding .swiper .swiper-wrapper {}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .thum {
+    margin-right: 50px;
+}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .thum img {}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info {
+    text-align: left; font-size: 1.125rem;
+}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_title {margin-bottom: 50px;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_title p {color:#ff3d00; margin-bottom: 10px;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_title p img {}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_detail {}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_detail li {display: flex; margin-bottom: 20px;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_detail li:last-child {margin-bottom: 50px;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_detail li h2 {margin-right: 20px; font-weight: 700;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_detail li p {}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .info_detail li p span {font-size: 1rem; font-weight: 600;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .overview {}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .overview h2 {font-weight: 700; margin-bottom: 10px;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .overview p {}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .link {display: flex; justify-content: space-between; margin-top: 50px;}
+.project .package_branding .swiper .swiper-wrapper .swiper-slide .info .link a {border:1px solid #e2e2e2; padding:10px 45px; border-radius: 10px;}
+.project .package_branding .swiper-button-prev {}
+.project .package_branding .swiper-button-next {}
+.project .package_branding div[class^=swiper-button] {color:#dddddd;}
+/* 5. contact */
+.contact {max-width: 1300px; margin:0 auto; padding:100px 0 200px; border-top: 1px solid #e2e2e2;}
+.contact h1 {margin-bottom: 50px; margin-top: 20px;}
+.contact .contact_info {display: flex; justify-content: space-between; align-items: center;}
+.contact .contact_info p {}
+.contact .contact_info p img {}
+.contact .contact_info .contact_txt {position: relative;}
+/* .contact .contact_info .contact_txt::before {
+    content: ''; display: inline-block; width:1px; height:200px;
+    background-color: #e2e2e2; position:absolute; left: -150px;
+    top:20px;
+} */
+.contact .contact_info .contact_txt h2 {font-size: 1.875rem; color:#ff3d00; margin-bottom: 40px;}
+.contact .contact_info .contact_txt p {line-height: 1.7; margin-bottom: 40px;}
+.contact .contact_info .contact_txt .contact_way {
+    display: flex;
+}
+.contact .contact_info .contact_txt .contact_way span {
+    display:flex;
+}
+.contact .contact_info .contact_txt .contact_way span:first-child {
+    margin-right: 20px;
+}
+.contact .contact_info .contact_txt .contact_way span img {margin-right: 10px;}

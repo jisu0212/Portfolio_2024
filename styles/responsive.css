@@ -1,0 +1,45 @@
+/* 반응형웹 1200, 800, 600 */
+@media screen and (max-width:1900px){
+    .bg .intro > p {display: none;}
+}
+@media screen and (max-width:1600px){
+    .project .web .swiper .swiper-wrapper .swiper-slide,
+    .project .landing .swiper .swiper-wrapper .swiper-slide,
+    .project .package_branding .swiper .swiper-wrapper .swiper-slide,
+    .project .mobile {flex-flow: column;}
+    .project .mobile {padding:0 32px;}
+    .project .web,
+    .project .landing,
+    .project .detail,
+    .project .package_branding {padding:0 32px;}
+    .profile {padding:80px 32px 80px;}
+}
+@media screen and (max-width:1000px){
+    .bg .intro h1 {font-size: 10rem;}
+    .profile .txt > p {display:none;}
+    .profile .txt {flex-flow:column;}
+    .skills {padding:70px 32px 100px;}
+    .skills .skills_info {flex-flow: column;}
+    .skills .skills_info li {width:100%;}
+    .skills .skills_info li:nth-child(8) {margin-top: 50px;}
+    .contact {padding:0 32px; margin-bottom: 50px;}
+    .contact .contact_info {flex-flow: column;}
+    .contact .contact_info .contact_txt h2 {margin-top: 40px;}
+}
+@media screen and (max-width:640px){
+    .bg .intro h1 {font-size: 7rem;}
+    .bg .intro .center .info {margin-top: 50px;}
+    .profile .txt .txt_info {flex-flow: column; justify-content: flex-start;}
+    .profile .txt ul::after {display: none;}
+    .profile .txt .txt_info ul:last-child {margin-top: 40px;}
+}
+@media screen and (max-width:530px) {
+    .bg .intro h1 {font-size: 5rem;}
+    .link {flex-flow: column;}
+    .link a {margin-bottom: 20px; text-align: center; width:200px;}
+    .link a:last-child {margin:0;}
+}
+@media screen and (max-width:450px){
+    .contact .contact_info .contact_txt .contact_way {flex-flow: column;}
+    .contact .contact_info .contact_txt .contact_way span:last-child {margin-top: 10px;}
+}
