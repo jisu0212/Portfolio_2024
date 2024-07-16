@@ -13,6 +13,7 @@
     .project .detail,
     .project .package_branding {padding:0 32px;}
     .profile {padding:80px 32px 80px;}
+    .project .mobile .thum {margin:0 auto;}
 }
 @media screen and (max-width:1000px){
     .bg .intro h1 {font-size: 10rem;}
