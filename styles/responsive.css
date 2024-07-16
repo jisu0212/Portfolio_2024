@@ -15,6 +15,9 @@
     .profile {padding:80px 32px 80px;}
     .project .mobile .thum {margin:0 auto;}
 }
+@media screen and (max-width:1360px) {
+    .contact{padding:100px 32px 200px;}
+}
 @media screen and (max-width:1000px){
     .bg .intro h1 {font-size: 10rem;}
     .profile .txt > p {display:none;}
@@ -26,6 +29,9 @@
     .contact {padding:0 32px; margin-bottom: 50px;}
     .contact .contact_info {flex-flow: column;}
     .contact .contact_info .contact_txt h2 {margin-top: 40px;}
+}
+@media screen and (max-width:740px) {
+    .project .mobile .thum {width:100%;}
 }
 @media screen and (max-width:640px){
     .bg .intro h1 {font-size: 7rem;}

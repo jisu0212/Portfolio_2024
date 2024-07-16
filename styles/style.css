@@ -3,7 +3,7 @@
     font-weight: 400;
     src: url(../font/05-1066-bdh9461.ttf);
 }
-body,html {scroll-behavior: smooth; overflow-x: hidden;}
+body,html {scroll-behavior: smooth;}
 /* 공통 */
 h1 {
     color:#ff3d00; font-size: 2.5rem;
@@ -193,7 +193,9 @@ margin-bottom: 150px;}
 .project .mobile .info .link a:first-child {margin-right: 50px;}
 /* 4-4. 상세 */
 .project .detail {margin-bottom: 150px; text-align: left;}
-.project .detail p {margin-bottom: 10px; color:#ff3d00;}
+.project .detail p {margin-bottom: 10px; color:#ff3d00; font-size: 1.125rem; font-weight: 500;}
+.project .detail p span {}
+.project .detail p span img {transform: translateY(2px);}
 .project .detail .swiper {height:500px;} /* overflow:hidden 내장 */
 .project .detail .swiper-slide a {position:relative; display: block; height: 500px;}
 .project .detail .swiper-slide a::after {
